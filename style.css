@@ -38,17 +38,25 @@ h1 span {
 
 .contador {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    font-size: 60px;
-    font-weight: bold;
-    color: #2f5ea7;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .label {
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#dias, #horas, #minutos {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 h2 {
