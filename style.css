@@ -1,3 +1,11 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,12 +23,14 @@ body {
     position: relative;
 }
 
+/* DATA */
 .data {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
+/* TÍTULO */
 h1 {
     font-size: 32px;
     font-weight: 400;
@@ -36,7 +46,7 @@ h1 span {
     font-weight: bold;
 }
 
-/* CONTADOR PADRÃO (desktop) */
+/* CONTADOR (DESKTOP) */
 .contador {
     display: flex;
     align-items: center;
@@ -44,38 +54,45 @@ h1 span {
     gap: 15px;
 }
 
+/* BLOCO */
 .bloco {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* 🔥 melhora centralização */
 }
 
+/* TEXTO (Dias, Horas...) */
 .label {
     font-size: 14px;
     margin-bottom: 5px;
 }
 
+/* NÚMEROS */
 #dias, #horas, #minutos {
     font-size: 40px;
     font-weight: bold;
+    letter-spacing: 2px; /* 🔥 deixa mais bonito */
 }
 
-/* 📱 RESPONSIVO (celular) */
+/* SEPARADOR ":" */
+.separador {
+    font-size: 30px;
+}
+
+/* 📱 RESPONSIVO (CELULAR) */
 @media (max-width: 600px) {
 
     .contador {
+        display: flex; /* 🔥 garante funcionamento */
         flex-direction: column;
         align-items: center;
         gap: 25px;
     }
 
-    /* 🔥 ESCONDE APENAS OS ":" */
-    .contador > span {
+    /* ESCONDE APENAS OS ":" */
+    .separador {
         display: none;
-    }
-
-    .bloco {
-        width: 100%;
     }
 
     #dias, #horas, #minutos {
@@ -85,21 +102,26 @@ h1 span {
     .label {
         font-size: 18px;
     }
+
+    h1 {
+        font-size: 24px;
+    }
 }
 
+/* EXTRA (caso use h2 depois) */
 h2 {
     font-size: 90px;
     margin: 0;
     font-weight: 900;
 }
 
-/* 🔥 ONDAS FIXAS */
+/* 🌊 ONDAS FIXAS */
 .ondas {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 200px;      /* altura do rodapé */
+    height: 200px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -109,6 +131,7 @@ h2 {
 
 .ondas img {
     width: 100%;
-    height: auto;       /* mantém imagem inteira */
-    max-height: 100%;   /* não ultrapassa o rodapé */
+    height: auto;
+    max-height: 100%;
+    display: block;
 }
