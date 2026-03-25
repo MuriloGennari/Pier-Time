@@ -64,20 +64,26 @@ h1 span {
 @media (max-width: 600px) {
 
     .contador {
-        flex-direction: column; /* fica um embaixo do outro */
-        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
 
-    .contador span {
-        display: none; /* esconde os ":" */
+    /* 🔥 ESCONDE APENAS OS ":" */
+    .contador > span {
+        display: none;
+    }
+
+    .bloco {
+        width: 100%;
     }
 
     #dias, #horas, #minutos {
-        font-size: 50px; /* maior no celular */
+        font-size: 55px;
     }
 
     .label {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
