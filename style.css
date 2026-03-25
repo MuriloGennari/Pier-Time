@@ -18,7 +18,7 @@ body {
 /* CONTEÚDO */
 .container {
     padding-top: 80px;
-    padding-bottom: 250px; /* espaço pra imagem inteira */
+    padding-bottom: 250px;
     z-index: 2;
     position: relative;
 }
@@ -46,12 +46,13 @@ h1 span {
     font-weight: bold;
 }
 
-/* CONTADOR (DESKTOP) */
+/* CONTADOR */
 .contador {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 15px;
+    margin-top: 40px;
 }
 
 /* BLOCO */
@@ -59,10 +60,10 @@ h1 span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* 🔥 melhora centralização */
+    justify-content: center;
 }
 
-/* TEXTO (Dias, Horas...) */
+/* LABEL (Dias, Horas...) */
 .label {
     font-size: 14px;
     margin-bottom: 5px;
@@ -72,37 +73,44 @@ h1 span {
 #dias, #horas, #minutos {
     font-size: 40px;
     font-weight: bold;
-    letter-spacing: 2px; /* 🔥 deixa mais bonito */
+    letter-spacing: 2px;
 }
 
 /* SEPARADOR ":" */
 .separador {
     font-size: 30px;
+    font-weight: bold;
+    margin: 0 5px;
 }
 
 /* 📱 RESPONSIVO (CELULAR) */
 @media (max-width: 600px) {
 
     .contador {
-        display: flex; /* 🔥 garante funcionamento */
-        flex-direction: row;
+        display: flex;
+        flex-direction: row; /* 🔥 mantém lado a lado */
         justify-content: center;
         align-items: center;
-        gap: 25px;
+        gap: 10px;
     }
 
-    /* ESCONDE APENAS OS ":" */
-    .separador {
-         font-weight: bold;
-    margin: 0 5px;
+    .bloco {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #dias, #horas, #minutos {
-        font-size: 55px;
+        font-size: 45px;
     }
 
     .label {
-        font-size: 18px;
+        font-size: 14px;
+    }
+
+    .separador {
+        display: inline; /* 🔥 garante que apareça */
+        font-size: 25px;
     }
 
     h1 {
@@ -110,14 +118,7 @@ h1 span {
     }
 }
 
-/* EXTRA (caso use h2 depois) */
-h2 {
-    font-size: 90px;
-    margin: 0;
-    font-weight: 900;
-}
-
-/*  ONDAS FIXAS */
+/* ONDAS */
 .ondas {
     position: fixed;
     bottom: 0;
