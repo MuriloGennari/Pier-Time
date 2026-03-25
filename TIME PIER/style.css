@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #2f5ea7;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* CONTEÚDO */
+.container {
+    padding-top: 80px;
+    padding-bottom: 250px; /* espaço pra imagem inteira */
+    z-index: 2;
+    position: relative;
+}
+
+.data {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h1 b {
+    font-weight: 900;
+}
+
+h1 span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #2f5ea7;
+}
+
+.label {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 90px;
+    margin: 0;
+    font-weight: 900;
+}
+
+/* 🔥 ONDAS FIXAS */
+.ondas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;      /* altura do rodapé */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ondas img {
+    width: 100%;
+    height: auto;       /* mantém imagem inteira */
+    max-height: 100%;   /* não ultrapassa o rodapé */
+}
