@@ -83,12 +83,12 @@ h1 span {
     margin: 0 5px;
 }
 
-/* 📱 RESPONSIVO (CELULAR) */
+/*  RESPONSIVO (CELULAR) */
 @media (max-width: 600px) {
 
     .contador {
         display: flex;
-        flex-direction: row; /* 🔥 mantém lado a lado */
+        flex-direction: row; /*  mantém lado a lado */
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -109,7 +109,7 @@ h1 span {
     }
 
     .separador {
-        display: inline; /* 🔥 garante que apareça */
+        display: inline; /*  garante que apareça */
         font-size: 25px;
     }
 
